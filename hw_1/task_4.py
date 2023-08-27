@@ -3,12 +3,14 @@
 
 
 import random
+
 LOWER_LIMIT = 0
 UPPER_LIMIT = 1000
+COUNT = 10
 num = random.randint(LOWER_LIMIT, UPPER_LIMIT)
 
-print('Угадай мое число от 0 до 1000!:) У тебя 10 попыток. Поехали...')
-count = 10
+print(f'Угадай мое число от {LOWER_LIMIT} до {UPPER_LIMIT}!:) У тебя {COUNT} попыток. Поехали...')
+count = COUNT
 while count != 0:
     user_num = int(input('Введи свое число: '))
     if user_num == num:
@@ -22,11 +24,10 @@ while count != 0:
 else:
     print(f'Ты израсходовал все попытки!  Я загадал - {num}')
 
-
-print('Теперь я попытаюсь угадать. Загадай число от 0 до 1000!')
+print(f'Теперь я попытаюсь угадать. Загадай число от {LOWER_LIMIT} до {UPPER_LIMIT}!')
 numbers = [i for i in range(UPPER_LIMIT + 1)]
-num = numbers[len(numbers)//2]
-count = 10
+num = numbers[len(numbers) // 2]
+count = COUNT
 
 while count != 0:
     user_answer = input(f'Твое число {num} (да/больше/меньше): ')
