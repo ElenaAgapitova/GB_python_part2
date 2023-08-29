@@ -5,7 +5,7 @@
 import random
 
 LOWER_LIMIT = 0
-UPPER_LIMIT = 1000
+UPPER_LIMIT = 100
 COUNT = 10
 num = random.randint(LOWER_LIMIT, UPPER_LIMIT)
 
@@ -24,19 +24,40 @@ while count != 0:
 else:
     print(f'Ты израсходовал все попытки!  Я загадал - {num}')
 
-print(f'Теперь я попытаюсь угадать. Загадай число от {LOWER_LIMIT} до {UPPER_LIMIT}!')
-numbers = [i for i in range(UPPER_LIMIT + 1)]
-num = numbers[len(numbers) // 2]
-count = COUNT
+# print(f'Теперь я попытаюсь угадать. Загадай число от {LOWER_LIMIT} до {UPPER_LIMIT}!')
+# numbers = [i for i in range(UPPER_LIMIT + 1)]
+# num = numbers[len(numbers) // 2]
+# count = COUNT
+#
+# while count != 0:
+#     user_answer = input(f'Твое число {num} (да/больше/меньше): ')
+#     if user_answer.lower() == 'да':
+#         print(f'Ура! Я угадал! Осталось попыток: {count - 1}')
+#         break
+#     elif user_answer.lower() == 'больше':
+#         numbers = numbers[numbers.index(num):]
+#     elif user_answer.lower() == 'меньше':
+#         numbers = numbers[:numbers.index(num)]
+#     num = numbers[len(numbers) // 2]
+#     count -= 1
+# else:
+#     print(f'Я израсходовал все попытки! Ты победил!')
 
-while count != 0:
+print(f'Теперь я попытаюсь угадать. Загадай число от {LOWER_LIMIT} до {UPPER_LIMIT}!')
+min_value = LOWER_LIMIT
+max_value = UPPER_LIMIT
+count = 1
+
+while count <= COUNT:
+    num = (min_value + max_value) // 2
     user_answer = input(f'Твое число {num} (да/больше/меньше): ')
-    if user_answer.lower() == 'да':
-        print(f'Ура! Я угадал! Осталось попыток: {count - 1}')
-        break
-    elif user_answer.lower() == 'больше':
-        numbers = numbers[numbers.index(num):]
+    if user_answer.lower() == 'больше':
+        min_value = num
     elif user_answer.lower() == 'меньше':
-        numbers = numbers[:numbers.index(num)]
-    num = numbers[len(numbers) // 2]
-    count -= 1
+        max_value = num
+    elif user_answer.lower() == 'да':
+        print(f'Ура! Я угадал! C {count} попытки:)')
+        break
+    count += 1
+else:
+    print(f'Я израсходовал все попытки! Ты победил!')
