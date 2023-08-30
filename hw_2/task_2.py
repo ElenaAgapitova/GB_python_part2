@@ -5,39 +5,27 @@
 from fractions import Fraction
 from math import gcd
 
-str_1 = input('Введите первую строку вида a/b: ')
-str_2 = input('Введите вторую строку вида a/b: ')
+first_str = list(map(int, input('Введите первую строку вида a/b: ').split('/')))
+second_str = list(map(int, input('Введите первую строку вида a/b: ').split('/')))
 
-a_1 = int(str_1.split("/")[0])
-b_1 = int(str_1.split("/")[1])
-
-a_2 = int(str_2.split("/")[0])
-b_2 = int(str_2.split("/")[1])
-
-frac_1 = Fraction(a_1, b_1)
-frac_2 = Fraction(a_2, b_2)
+frac_1 = Fraction(first_str[0], first_str[1])
+frac_2 = Fraction(second_str[0], second_str[1])
 
 print(f'\nПРОВЕРКА\nПроизведение: {frac_1 * frac_2}; сумма: {frac_1 + frac_2}')
 
 # произведение
-a, b = a_1 * a_2, b_1 * b_2
-a, b = int(a / gcd(a, b)), int(b / gcd(a, b))
+numerator_multi = first_str[0] * second_str[0]
+denominator_multi = first_str[1] * second_str[1]
+multi_frac = [numerator_multi // gcd(numerator_multi, denominator_multi),
+              denominator_multi // gcd(numerator_multi, denominator_multi)]
 
 # сумма
-c, d = a_1 * b_2 + a_2 * b_1, b_1 * b_2
-c, d = int(c / gcd(c, d)), int(d / gcd(c, d))
+numerator_summ = first_str[0] * second_str[1] + first_str[1] * second_str[0]
+denominator_summ = first_str[1] * second_str[1]
+summ_frac = [numerator_summ // gcd(numerator_summ, denominator_summ),
+             denominator_summ // gcd(numerator_summ, denominator_summ)]
 
-if b != 1 and d != 1:
-    result_1 = str(a) + '/' + str(b)
-    result_2 = str(c) + '/' + str(d)
-elif b == 1 and d != 1:
-    result_1 = str(a)
-    result_2 = str(c) + '/' + str(d)
-elif b != 1 and d == 1:
-    result_1 = str(a) + '/' + str(b)
-    result_2 = str(c)
-else:
-    result_1 = str(a)
-    result_2 = str(c)
+result_1 = f'{multi_frac[0]}/{multi_frac[1]}' if multi_frac[1] != 1 else multi_frac[0]
+result_2 = f'{summ_frac[0]}/{summ_frac[1]}' if summ_frac[1] != 1 else summ_frac[0]
 
 print(f'\nРЕЗУЛЬТАТ\nПроизведение: {result_1}; сумма: {result_2}')
