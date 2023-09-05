@@ -23,3 +23,4 @@ for key, value in THINGS.items():
         total_weight -= value
 
 print(f'{backpack=}')
+
