@@ -10,13 +10,19 @@ THINGS = {
     'Термос': 1
 }
 
-all_combination = []
-for i in range(1, len(THINGS.items()) + 1):
-    for combination in itertools.combinations(THINGS.items(), r=i):
-        total_weight = sum(weight for _, weight in combination)
-        if total_weight <= WEIGHT:
-            all_combination.append([thing for thing, _ in combination])
 
+def find_all_combination(things: dict, weight: int) -> list:
+    all_combination = []
+    for counter in range(1, len(things.items()) + 1):
+        for combination in itertools.combinations(things.items(), r=counter):
+            total_weight = sum(weight for _, weight in combination)
+            if total_weight <= weight:
+                all_combination.append([thing for thing, _ in combination])
+    return all_combination
+
+
+all_combination = find_all_combination(THINGS, WEIGHT)
+print(f'Всего {len(all_combination)} возможных комбинаций:')
 for i, item in enumerate(all_combination, 1):
-    print(f'Вариант {i}.', end=' '),
+    print(f'{i}.', end=' '),
     print(*item, sep=', ')
