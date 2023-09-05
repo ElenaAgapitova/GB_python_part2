@@ -7,8 +7,8 @@ print(first_list)
 
 second_list = []
 
-for item in first_list:
-    if first_list.count(item) > 1 and item not in second_list:
+for item in set(first_list):
+    if first_list.count(item) != 1:
         second_list.append(item)
 
 print(second_list)

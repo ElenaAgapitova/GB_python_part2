@@ -17,10 +17,9 @@ backpack = []
 total_weight = 0
 
 for key, value in THINGS.items():
-    if (total_weight := total_weight + value) <= 8:
+    if (total_weight + value) <= WEIGHT:
         backpack.append(key)
-    else:
-        total_weight -= value
+        total_weight += value
 
 print(f'{backpack=}')
 
