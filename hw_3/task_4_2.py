@@ -21,8 +21,8 @@ def find_all_combination(things: dict, weight: int) -> list:
     return all_combination
 
 
-all_combination = find_all_combination(THINGS, WEIGHT)
-print(f'Всего {len(all_combination)} возможных комбинаций:')
-for i, item in enumerate(all_combination, 1):
+possible_combination = find_all_combination(THINGS, WEIGHT)
+print(f'Всего {len(possible_combination)} возможных комбинаций:')
+for i, item in enumerate(possible_combination, 1):
     print(f'{i}.', end=' '),
     print(*item, sep=', ')
