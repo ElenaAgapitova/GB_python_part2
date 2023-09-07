@@ -4,7 +4,13 @@
 from pprint import pp
 
 
-def reverse_dict(**kwargs):
+def reverse_dict(**kwargs) -> dict[object, object]:
+    """
+    Функция, которая принимает на вход только ключевые параметры и возвращает словарь,
+    где ключ — значение переданного аргумента, а значение — имя аргумента.
+    :param kwargs: любое количество ключевых аргументов.
+    :return: словарь.
+    """
     reversed_dict = {}
     for key, value in kwargs.items():
         if isinstance(value, (int, float, str, tuple, frozenset)):

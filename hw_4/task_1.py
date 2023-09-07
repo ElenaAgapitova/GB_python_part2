@@ -4,7 +4,7 @@
 my_matrix = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]]
 
 
-def matrix_transposition_zip(matrix: list) -> list:
+def matrix_transposition_zip(matrix: list[list[int]]) -> list[list[int]]:
     """
     Функция транспонирования матрицы с помощью функции zip.
     :param matrix: двухмерный список для транспонирования.
@@ -13,7 +13,7 @@ def matrix_transposition_zip(matrix: list) -> list:
     return [list(item) for item in zip(*matrix)]
 
 
-def matrix_transposition_loop(matrix: list) -> list:
+def matrix_transposition_loop(matrix: list[list[int]]) -> list[list[int]]:
     """
     Функция транспонирования матрицы с циклами.
     :param matrix: двухмерный список для транспонирования.
@@ -26,7 +26,7 @@ def matrix_transposition_loop(matrix: list) -> list:
     return transposed_matrix
 
 
-def print_matrix(text: str, matrix: list) -> None:
+def print_matrix(text: str, matrix: list[list[int]]) -> None:
     print(text)
     for i in range(len(matrix)):
         for j in range(len(matrix[i])):
