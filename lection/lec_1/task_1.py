@@ -36,5 +36,13 @@
 a = 'hello world'  # неизменяемый объект (также к ним относятся кортеж, frozenset, числа)
 b = [1, 2, 3, 5]  # изменяемый объект (также к ним относятся словари, множества)
 # изменяемые объекты не хэшируемые
-print(hash(a))  # -6180989516210485593
+# print(hash(a))  # -6180989516210485593
 # print(hash(b)) TypeError: unhashable type: 'list'
+
+c = list(range(0, 10, 2))
+# print(c)
+
+my_gen = (key*2 for key in b)
+d = set(my_gen)
+print(d)
+
