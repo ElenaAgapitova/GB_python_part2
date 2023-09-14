@@ -3,4 +3,5 @@
 [Практическое задание №2](https://github.com/ElenaAgapitova/GB_python_part2/tree/master/hw_2)                       
 [Практическое задание №3](https://github.com/ElenaAgapitova/GB_python_part2/tree/master/hw_3)           
 [Практическое задание №4](https://github.com/ElenaAgapitova/GB_python_part2/tree/master/hw_4)    
-[Практическое задание №5](https://github.com/ElenaAgapitova/GB_python_part2/tree/master/hw_5)      
+[Практическое задание №5](https://github.com/ElenaAgapitova/GB_python_part2/tree/master/hw_5)                 
+[Практическое задание №6](https://github.com/ElenaAgapitova/GB_python_part2/tree/master/hw_6)
