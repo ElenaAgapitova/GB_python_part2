@@ -1,0 +1,284 @@
+[
+    {
+        "dir": "hw_7",
+        "name": "hw7_main.py",
+        "type": "file",
+        "size": 3068
+    },
+    {
+        "dir": "hw_7",
+        "name": "__init__.py",
+        "type": "file",
+        "size": 0
+    },
+    {
+        "dir": "image",
+        "name": "tihrtm.jpg",
+        "type": "file",
+        "size": 3266
+    },
+    {
+        "dir": "image",
+        "name": "tlhs.png",
+        "type": "file",
+        "size": 1891
+    },
+    {
+        "dir": "image",
+        "name": "whiol.gif",
+        "type": "file",
+        "size": 1981
+    },
+    {
+        "dir": "mix_folder",
+        "name": "hnkuyx.py",
+        "type": "file",
+        "size": 2247
+    },
+    {
+        "dir": "mix_folder",
+        "name": "jobui.py",
+        "type": "file",
+        "size": 1922
+    },
+    {
+        "dir": "mix_folder",
+        "name": "pikn.py",
+        "type": "file",
+        "size": 2401
+    },
+    {
+        "dir": "my_folder",
+        "name": "al.txt",
+        "type": "file",
+        "size": 1934
+    },
+    {
+        "dir": "my_folder",
+        "name": "cq.txt",
+        "type": "file",
+        "size": 704
+    },
+    {
+        "dir": "my_folder",
+        "name": "d.txt",
+        "type": "file",
+        "size": 2396
+    },
+    {
+        "dir": "my_folder",
+        "name": "k.txt",
+        "type": "file",
+        "size": 3141
+    },
+    {
+        "dir": "my_folder",
+        "name": "kq.txt",
+        "type": "file",
+        "size": 618
+    },
+    {
+        "dir": "my_folder",
+        "name": "lq.txt",
+        "type": "file",
+        "size": 2291
+    },
+    {
+        "dir": "my_folder",
+        "name": "m.txt",
+        "type": "file",
+        "size": 1767
+    },
+    {
+        "dir": "my_folder",
+        "name": "ns.txt",
+        "type": "file",
+        "size": 2311
+    },
+    {
+        "dir": "my_folder",
+        "name": "pn.txt",
+        "type": "file",
+        "size": 4001
+    },
+    {
+        "dir": "my_folder",
+        "name": "zx.txt",
+        "type": "file",
+        "size": 4018
+    },
+    {
+        "dir": "rename_folder",
+        "name": "cdwb_new_001.doc",
+        "type": "file",
+        "size": 3768
+    },
+    {
+        "dir": "rename_folder",
+        "name": "jcgiex.py",
+        "type": "file",
+        "size": 943
+    },
+    {
+        "dir": "rename_folder",
+        "name": "mihw_new_002.doc",
+        "type": "file",
+        "size": 3317
+    },
+    {
+        "dir": "rename_folder",
+        "name": "trybxez.pdf",
+        "type": "file",
+        "size": 2721
+    },
+    {
+        "dir": "rename_folder",
+        "name": "vzxluoj.pdf",
+        "type": "file",
+        "size": 415
+    },
+    {
+        "dir": "rename_folder",
+        "name": "xamvymx.py",
+        "type": "file",
+        "size": 4049
+    },
+    {
+        "dir": "task_function",
+        "name": "task_1.py",
+        "type": "file",
+        "size": 1562
+    },
+    {
+        "dir": "task_function",
+        "name": "task_2.py",
+        "type": "file",
+        "size": 1005
+    },
+    {
+        "dir": "task_function",
+        "name": "task_3.py",
+        "type": "file",
+        "size": 1739
+    },
+    {
+        "dir": "task_function",
+        "name": "__init__.py",
+        "type": "file",
+        "size": 202
+    },
+    {
+        "dir": "__pycache__",
+        "name": "task_1.cpython-311.pyc",
+        "type": "file",
+        "size": 2401
+    },
+    {
+        "dir": "__pycache__",
+        "name": "task_2.cpython-311.pyc",
+        "type": "file",
+        "size": 1328
+    },
+    {
+        "dir": "__pycache__",
+        "name": "task_3.cpython-311.pyc",
+        "type": "file",
+        "size": 1458
+    },
+    {
+        "dir": "__pycache__",
+        "name": "__init__.cpython-311.pyc",
+        "type": "file",
+        "size": 441
+    },
+    {
+        "dir": "text",
+        "name": "einmw.doc",
+        "type": "file",
+        "size": 1595
+    },
+    {
+        "dir": "text",
+        "name": "jvxtjw.txt",
+        "type": "file",
+        "size": 1204
+    },
+    {
+        "dir": "text",
+        "name": "sytwj.pdf",
+        "type": "file",
+        "size": 3461
+    },
+    {
+        "dir": "video",
+        "name": "acysxg.avi",
+        "type": "file",
+        "size": 2096
+    },
+    {
+        "dir": "video",
+        "name": "avre.mp4",
+        "type": "file",
+        "size": 1619
+    },
+    {
+        "dir": "video",
+        "name": "eadlj.mov",
+        "type": "file",
+        "size": 2876
+    },
+    {
+        "dir": "hw_7",
+        "name": "image",
+        "type": "directory",
+        "size": 0
+    },
+    {
+        "dir": "hw_7",
+        "name": "mix_folder",
+        "type": "directory",
+        "size": 4096
+    },
+    {
+        "dir": "hw_7",
+        "name": "my_folder",
+        "type": "directory",
+        "size": 4096
+    },
+    {
+        "dir": "hw_7",
+        "name": "rename_folder",
+        "type": "directory",
+        "size": 4096
+    },
+    {
+        "dir": "hw_7",
+        "name": "task_function",
+        "type": "directory",
+        "size": 4096
+    },
+    {
+        "dir": "hw_7",
+        "name": "text",
+        "type": "directory",
+        "size": 0
+    },
+    {
+        "dir": "hw_7",
+        "name": "video",
+        "type": "directory",
+        "size": 0
+    },
+    {
+        "dir": "hw_7",
+        "name": "__pycache__",
+        "type": "directory",
+        "size": 0
+    },
+    {
+        "dir": "task_function",
+        "name": "__pycache__",
+        "type": "directory",
+        "size": 4096
+    }
+]
