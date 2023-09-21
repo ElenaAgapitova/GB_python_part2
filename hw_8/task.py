@@ -42,12 +42,12 @@ def get_info_about_dirs_and_files(path: str = os.getcwd()):
     return file_list + dir_list
 
 
-def save_json(info_list: list[dict[str, int]]):
+def save_json(info_list: list[dict[str, str | int]]):
     with open('info_json.json', 'w', encoding='utf-8') as js_file:
         json.dump(info_list, js_file, indent=4, ensure_ascii=False)
 
 
-def save_csv(df_list: list[dict[str, int]]):
+def save_csv(df_list: list[dict[str, str | int]]):
     with open('info_csv.csv', 'w', newline='', encoding='utf-8') as csv_file:
         columns = ['dir', 'name', 'type', 'size']
         csv_writer = csv.DictWriter(csv_file, dialect='excel', fieldnames=columns)
@@ -55,7 +55,7 @@ def save_csv(df_list: list[dict[str, int]]):
         csv_writer.writerows(df_list)
 
 
-def save_pickle(data_lst: list[dict[str, int]]):
+def save_pickle(data_lst: list[dict[str, str | int]]):
     with open('info_pickle.pickle', 'wb') as pickle_file:
         pickle.dump(data_lst, pickle_file)
 
