@@ -56,7 +56,7 @@ def save_csv(df_list: list[dict[str, int]]):
 
 
 def save_pickle(data_lst: list[dict[str, int]]):
-    with open('info_picle.pickle', 'wb') as pickle_file:
+    with open('info_pickle.pickle', 'wb') as pickle_file:
         pickle.dump(data_lst, pickle_file)
 
 
