@@ -16,14 +16,18 @@ from create_csv import create_csv_file
 
 
 def csv_decor(func: Callable):
-    def wrapper(params_file='parameters.csv'):
-        result_dict = {}
-        if os.path.isfile(params_file):
-            with open(params_file, 'r', encoding='utf-8') as file:
-                csv_reader = csv.reader(file, dialect='excel')
-                for line in csv_reader:
-                    a, b, c = (list(map(int, line)))
-                    result_dict[f'Параметры: {a=}, {b=}, {c=}'] = func(a, b, c)
+    result_dict = {}
+
+    def wrapper(*args):
+        if len(args) == 1:
+            if os.path.isfile(*args):
+                with open(*args, 'r', encoding='utf-8') as file:
+                    csv_reader = csv.reader(file, dialect='excel')
+                    for line in csv_reader:
+                        a, b, c = (list(map(int, line)))
+                        result_dict[f'Параметры: {a=}, {b=}, {c=}'] = func(a, b, c)
+        elif len(args) == 3:
+            result_dict[f'Параметры: a={args[0]}, b={args[1]}, c={args[2]}'] = func(*args)
         return result_dict
 
     return wrapper
@@ -55,4 +59,5 @@ def solved_equation(a: int, b: int, c: int) -> float | tuple | str:
 
 if __name__ == '__main__':
     create_csv_file()
-    print(solved_equation())
+    solved_equation(12, 203, 75)
+    print(solved_equation('parameters.csv'))
