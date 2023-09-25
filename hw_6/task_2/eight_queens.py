@@ -10,7 +10,9 @@
 расстановки ферзей в задаче выше. Проверяйте различный случайные варианты и выведите 4 успешных
 расстановки.
 """
+import time
 from random import randint as ri
+from typing import Callable
 
 N = 8
 
@@ -31,6 +33,17 @@ def check_position(position: list[tuple]) -> bool:
     return True
 
 
+def get_time(func: Callable):
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        result = func(*args, **kwargs)
+        print(f'Время выполнения: {time.time() - start}')
+        return result
+
+    return wrapper
+
+
+@get_time
 def get_good_position(n: int, m: int) -> list[list]:
     """
     Случайный подбор успешных расстановок ферзей.
