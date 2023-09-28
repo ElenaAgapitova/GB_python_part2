@@ -25,9 +25,11 @@ def csv_decor(func: Callable):
                     csv_reader = csv.reader(file, dialect='excel')
                     for line in csv_reader:
                         a, b, c = (list(map(int, line)))
-                        result_dict[f'Параметры: {a=}, {b=}, {c=}'] = func(a, b, c)
+                        if a:
+                            result_dict[f'Параметры: {a=}, {b=}, {c=}'] = func(a, b, c)
         elif len(args) == 3:
-            result_dict[f'Параметры: a={args[0]}, b={args[1]}, c={args[2]}'] = func(*args)
+            if args[0]:
+                result_dict[f'Параметры: a={args[0]}, b={args[1]}, c={args[2]}'] = func(*args)
         return result_dict
 
     return wrapper

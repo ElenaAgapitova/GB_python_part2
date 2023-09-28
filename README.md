@@ -7,6 +7,7 @@
 [Практическое задание №6](https://github.com/ElenaAgapitova/GB_python_part2/tree/master/hw_6)           
 [Практическое задание №7](https://github.com/ElenaAgapitova/GB_python_part2/tree/master/hw_7)        
 [Практическое задание №8](https://github.com/ElenaAgapitova/GB_python_part2/tree/master/hw_8)         
-[Практическое задание №9](https://github.com/ElenaAgapitova/GB_python_part2/tree/master/hw_9)
+[Практическое задание №9](https://github.com/ElenaAgapitova/GB_python_part2/tree/master/hw_9)          
+[Практическое задание №10](https://github.com/ElenaAgapitova/GB_python_part2/tree/master/hw_10)
 
 
