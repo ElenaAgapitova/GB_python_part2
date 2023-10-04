@@ -15,15 +15,17 @@ class Matrix:
     def transposition(self):
         self.__matrix = [list(item) for item in zip(*self.__matrix)]
 
-    def print_matrix(self):
+    def __str__(self):
+        text_matrix = ''
         for i in range(len(self.__matrix)):
             for j in range(len(self.__matrix[i])):
-                print(self.__matrix[i][j], end='\t')
-            print()
-        print()
+                text_matrix += str(self.__matrix[i][j]) + '\t'
+            text_matrix += '\n'
+        text_matrix += '\n'
+        return text_matrix
 
 
 matrix_1 = Matrix(3, 4, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
-matrix_1.print_matrix()
+print(matrix_1)
 matrix_1.transposition()
-matrix_1.print_matrix()
+print(matrix_1)

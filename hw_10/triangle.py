@@ -19,10 +19,18 @@ class Triangle:
     def get_sides(self):
         return f'side a = {self.__a}, side b = {self.__b}, side c = {self.__c}'
 
+    def get_type(self):
+        if self.__a == self.__b == self.__c:
+            return 'Равносторонний'
+        elif self.__a == self.__b or self.__a == self.__c or self.__b == self.__c:
+            return 'Равнобедренный'
+        else:
+            return 'Разносторонний'
+
 
 triangle_1 = Triangle(3, 4, 5)
 print(triangle_1.get_sides())  # side a = 3, side b = 4, side c = 5
-
+print(triangle_1.get_type())
 triangle_2 = Triangle(1, 2, 4)  # raise ValueError
 print(triangle_2.get_sides())
 
