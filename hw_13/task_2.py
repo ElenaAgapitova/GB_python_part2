@@ -1,16 +1,20 @@
 from typing import Union
 
 
-class InvalidError(Exception):
-    pass
+class InvalidTextError(ValueError):
+    def __init__(self, value):
+        self.value = value
+
+    def __str__(self):
+        return f'Invalid text: {self.value}. Text should be a non-empty string.'
 
 
-class InvalidTextError(InvalidError):
-    pass
+class InvalidNumberError(ValueError):
+    def __init__(self, value):
+        self.value = value
 
-
-class InvalidNumberError(InvalidError):
-    pass
+    def __str__(self):
+        return f'Invalid number: {self.value}. Number should be a positive integer or float.'
 
 
 class Archive:
@@ -28,9 +32,9 @@ class Archive:
 
     def __new__(cls, text: str, number: Union[int, float]):
         if text == '' or not isinstance(text, str):
-            raise InvalidTextError(f'Invalid text: {text}. Text should be a non-empty string.')
+            raise InvalidTextError(text)
         if number < 0:
-            raise InvalidNumberError(f'Invalid number: {number}. Number should be a positive integer or float.')
+            raise InvalidNumberError(number)
         if cls._instance is None:
             cls._instance = super().__new__(cls)
             cls._instance.archive_text = []
@@ -45,7 +49,8 @@ class Archive:
         self.number = number
 
     def __str__(self):
-        return f'Text is {self.text} and number is {self.number}. Also {self.archive_text} and {self.archive_number}'
+        return f'Text is {self.text} and number is {self.number}. ' \
+               f'Also {self.archive_text} and {self.archive_number}'
 
     def __repr__(self):
         return f'Archive("{self.text}", {self.number})'

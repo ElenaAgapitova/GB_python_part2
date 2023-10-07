@@ -2,7 +2,11 @@ from functools import total_ordering
 
 
 class NegativeValueError(Exception):
-    pass
+    def __init__(self, msg: str):
+        self.msg = msg
+
+    def __str__(self):
+        return self.msg
 
 
 @total_ordering
