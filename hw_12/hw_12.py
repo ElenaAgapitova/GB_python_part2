@@ -24,8 +24,6 @@ class Number:
 
 
 class Text:
-    def __init__(self, value: str = None):
-        self.min_value = value
 
     def __set_name__(self, owner, name):
         self.param_name = '__' + name
