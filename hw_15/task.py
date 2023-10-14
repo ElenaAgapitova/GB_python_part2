@@ -23,18 +23,19 @@ PATH = 'C:/Users/User/Desktop/Developer/Python_part2/hw_7'
 
 
 def get_info_about_dirs_and_files(path: str):
-    DirClass = namedtuple('DirClass', ['name', 'dir', 'path'])
-    FileClass = namedtuple('FileClass', ['name', 'ext', 'dir', 'path'])
+    DirClass = namedtuple('DirClass', ['name', 'is_directory', 'parent_directory'])
+    FileClass = namedtuple('FileClass', ['name', 'extension', 'is_directory', 'parent_directory'])
     for root, dirs, files in os.walk(path):
         for dir_ in dirs:
             dir_path = os.path.join(root, dir_)
-            dir_obj = DirClass(dir_, dir_path.split('\\')[-2].split('/')[-1], dir_path)
+            dir_obj = DirClass(dir_, f'{os.path.isdir(dir_path)}',
+                               dir_path.split('\\')[-2].split('/')[-1])
             logger.info(msg=f'{dir_obj}')
 
         for file in files:
             file_path = os.path.join(root, file)
-            file_obj = FileClass(file.split('.')[0], file.split('.')[1],
-                                 file_path.split('\\')[-2].split('/')[-1], file_path)
+            file_obj = FileClass(file.split('.')[0], file.split('.')[1], f'{os.path.isdir(file_path)}',
+                                 file_path.split('\\')[-2].split('/')[-1])
             logger.info(msg=f'{file_obj}')
 
 

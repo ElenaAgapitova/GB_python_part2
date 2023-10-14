@@ -12,5 +12,5 @@
 [Практическое задание №11](https://github.com/ElenaAgapitova/GB_python_part2/tree/master/hw_11)                      
 [Практическое задание №12](https://github.com/ElenaAgapitova/GB_python_part2/tree/master/hw_12)                  
 [Практическое задание №13](https://github.com/ElenaAgapitova/GB_python_part2/tree/master/hw_13)          
-[Практическое задание №14](https://github.com/ElenaAgapitova/GB_python_part2/tree/master/hw_14)
-
+[Практическое задание №14](https://github.com/ElenaAgapitova/GB_python_part2/tree/master/hw_14)                     
+[Практическое задание №15](https://github.com/ElenaAgapitova/GB_python_part2/tree/master/hw_15)
