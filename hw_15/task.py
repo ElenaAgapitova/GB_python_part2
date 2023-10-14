@@ -15,7 +15,7 @@ from collections import namedtuple
 import argparse
 
 my_format = '{msg}'
-logging.basicConfig(filename='log_info.log', filemode='a', encoding='utf-8',
+logging.basicConfig(filename='info.txt', filemode='a', encoding='utf-8',
                     level=logging.INFO, style='{', format=my_format)
 logger = logging.getLogger(__name__)
 
